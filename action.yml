@@ -14,6 +14,7 @@ inputs:
   append_content:
     description: ''
     required: false
+    default: false
   google_service_account_email:
     description: ''
     required: true
