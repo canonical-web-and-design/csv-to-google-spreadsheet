@@ -1,0 +1,36 @@
+# action.yml
+name: 'Google Spreadsheet - CSV importer'
+description: 'Import a CSV file into a Google Spreadsheet'
+inputs:
+  csv_path:
+    description: ''
+    required: true
+  spreadsheet_id:
+    description: ''
+    required: true
+  worksheet:
+    description: ''
+    required: true
+  append_content:
+    description: ''
+    required: false
+    default: false
+  google_service_account_email:
+    description: ''
+    required: true
+  google_service_account_private_key:
+    description: ''
+    required: true
+branding:
+  color: yellow
+  icon: upload-cloud
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.csv_path }}
+    - ${{ inputs.spreadsheet_id }}
+    - ${{ inputs.worksheet }}
+    - ${{ inputs.append_content }}
+    - ${{ inputs.google_service_account_email }}
+    - ${{ inputs.google_service_account_private_key }}
