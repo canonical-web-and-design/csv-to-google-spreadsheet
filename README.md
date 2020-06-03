@@ -44,6 +44,7 @@ So the full step would look like:
 
 
 **If you are wondering how to get a Service Account**
+
 A service account is a special type of Google account intended to represent a non-human user that needs to authenticate and be authorized to access data in Google APIs.
 
 Since it’s a separate account, by default it does not have access to any spreadsheet until you share it with this account. Just like any other Google account.
