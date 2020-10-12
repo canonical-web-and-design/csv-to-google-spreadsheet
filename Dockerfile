@@ -8,4 +8,4 @@ COPY importer.py .
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENTRYPOINT python3 importer.py
+ENTRYPOINT ["python3", "/importer.py"]
