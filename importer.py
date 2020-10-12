@@ -8,7 +8,7 @@ from google.oauth2.service_account import Credentials
 # Input vars
 csv_path = getenv("INPUT_CSV_PATH")
 spreadsheet_id = getenv("INPUT_SPREADSHEET_ID")
-worksheet_id = int(getenv("INPUT_WORKSHEET", 0))
+worksheet_id = int(getenv("INPUT_WORKSHEET"))
 append_content = strtobool(getenv("INPUT_APPEND_CONTENT", "False"))
 
 service_account_info = {

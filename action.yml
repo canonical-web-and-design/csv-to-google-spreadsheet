@@ -9,8 +9,9 @@ inputs:
     description: ''
     required: true
   worksheet:
-    description: ''
+    description: 'Index of worksheet in Spreadsheet. Index starts from zero.'
     required: true
+    default: 0
   append_content:
     description: ''
     required: false
