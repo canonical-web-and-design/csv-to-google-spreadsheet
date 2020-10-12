@@ -8,7 +8,7 @@ from google.oauth2.service_account import Credentials
 # Input vars
 csv_path = getenv("INPUT_CSV_PATH")
 spreadsheet_id = getenv("INPUT_SPREADSHEET_ID")
-worksheet = int(getenv("INPUT_WORKSHEET", 0))
+worksheet_id = int(getenv("INPUT_WORKSHEET", 0))
 append_content = strtobool(getenv("INPUT_APPEND_CONTENT", "False"))
 
 service_account_info = {
@@ -46,7 +46,7 @@ creds = Credentials.from_service_account_info(
 client = gspread.authorize(creds)
 
 spreadsheet = client.open_by_key(spreadsheet_id)
-ws = spreadsheet.get_worksheet(0)
+ws = spreadsheet.get_worksheet(worksheet_id)
 
 if append_content:
     start_from = f"A{next_available_row(ws)}"
