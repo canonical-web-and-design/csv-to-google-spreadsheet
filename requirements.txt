@@ -1,2 +1,2 @@
 gspread==3.7.0
-google-auth==1.28.1
+google-auth==1.30.0
